@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APP NAME</title>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'sans-serif';
+  }
+
+  body {
+    background: linear-gradient(135deg, #FDD835, #FF5722), url('https://thumbs.dreamstime.com/b/volunteer-word-cloud-heart-concept-58067008.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  .header {
+    text-align: left;
+    margin: 20px;
+  }
+
+  .form {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 300px;
+    text-align: center;
+  }
+
+  h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+  }
+
+  .button {
+    background-color: #007BFF;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background-color: #0056b3;
+  }
+
+  p {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem; /* Adjust font size here */
+  }
+
+  .error {
+    color: red;
+    margin-top: 1rem;
+  }
+</style>
+</head>
+<body>
+  <div class="header">
+    <p>Welcome to our APP NAME</p>
+  </div>
+
+  <div class="form">
+    <form action="/registerAuth" method="POST">
+      <h2>Register</h2>
+      First Name:
+      <input type="text" name="firstName" placeholder="First Name..." required> <br>
+      Last Name:
+      <input type="text" name="lastName" placeholder="Last Name..." required> <br>
+      Username:
+      <input type="text" name="username" placeholder="Username..." required> <br>
+      Email:
+      <input type="text" name="email" placeholder="Email..." required> <br>
+      Password:
+      <input type="password" name="password" placeholder="Password..." required> <br>
+      <input type="submit" class="button" value="Register" /> <br>
+      {% if error %}
+          <p class="error">An error has occurred: {{error}}</p>
+      {% endif %}
+    </form>
+  </div>
+</body>
+</html>
+
+

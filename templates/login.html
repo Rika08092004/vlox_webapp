@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Login - APP NAME</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #2080c0; /* Calming Blue Color */
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .login-container {
+      background-color: white;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      width: 300px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+
+    .button {
+      background-color: #5b6977;
+      color: white;
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button:hover {
+      background-color: #0056b3;
+    }
+
+    p {
+      margin-top: 1rem;
+    }
+
+    .register-link {
+      display: block;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-container">
+    <h2>Login to APP NAME</h2>
+    <form action="/loginAuth" method="POST">
+      Username:
+      <input type="text" name="username" placeholder="Username..." required> <br>
+      Password:
+      <input type="password" name="password" placeholder="Password..." required> <br>
+      <input type="submit" class="button" value="Login" />
+      {% if error %}
+      <p class="error">{{error}}</p>
+      {% endif %}
+    </form>
+    <p class="register-link">Don't have an account? <a href="register.html">Register here</a></p>
+  </div>
+</body>
+
+</html>
+
+
+

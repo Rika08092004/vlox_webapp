@@ -19,7 +19,7 @@ SALT = 'vlox9000'    # For future iterations, when user-base increases, use rand
 connection = pymysql.connect(host='localhost',
                              port= 3306,  # Port Number
                              user= 'root',
-                             password='W@2915djkq#',
+                             password='miyarika0809',
                              db='vinstagram',    # Name of mysql database
                              charset='utf8mb4',
                              cursorclass=pymysql.cursors.DictCursor)
